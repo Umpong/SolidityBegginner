@@ -6,12 +6,12 @@ This program's goal is to illustrate a token's fundamental syntactic functionali
 ## Description
 
 The goal of this smart contract project is to develop a proprietary token with the following features:
-    1. The public variables in the contract (Token Name, Token Abbrv., and Total Supply) store information about the coin.
-    2. Addresses and balances are mapped in the contract (address => uint).
-    3. The mint function in the contract requires two inputs: an address and a value. The function then raises the balance and the total supply by that amount of the "sender" address by the specified sum
-    4. The contract includes a burn function that destroys tokens, operating in opposition to the mint function. 
-    In the same way as the mint operates, it will require an address and value. The value will then be subtracted from the entire supply and from the "sender's" equilibrium.
-    5. Lastly, the burn function should have conditionals to make sure the balance of "sender" is greater than or equal to the amount that is supposed to be burned.
+1. The public variables in the contract (Token Name, Token Abbrv., and Total Supply) store information about the coin.
+2.  Addresses and balances are mapped in the contract (address => uint).
+3. The mint function in the contract requires two inputs: an address and a value. The function then raises the balance and the total supply by that amount of the "sender" address by the specified sum
+4. The contract includes a burn function that destroys tokens, operating in opposition to the mint function. 
+   In the same way as the mint operates, it will require an address and value. The value will then be subtracted from the entire supply and from the "sender's" equilibrium.
+5. Lastly, the burn function should have conditionals to make sure the balance of "sender" is greater than or equal to the amount that is supposed to be burned.
 
 ## Getting Started
 
