@@ -16,6 +16,7 @@ The goal of this smart contract project is to develop a proprietary token with t
 ## Getting Started
 
 Remix is an online Solidity IDE that may be used to run this software; to get started, visit the Remix website at https://remix.ethereum.org.
+
 Click the "+" symbol in the left-hand sidebar to start a new file once you are on the Remix website. Save the file as HelloWorld.sol or another file with the.sol extension. 
 
 ### Executing program
