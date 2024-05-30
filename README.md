@@ -24,7 +24,8 @@ Copy and paste the code into the file:
 
 pragma solidity 0.8.18;
 
-contract AbayonToken {
+
+   contract AbayonToken {
    
     string public tokenName = "AEROS";
     string public tokenAbbrv = "ARS";
