@@ -23,27 +23,24 @@ Click the "+" symbol in the left-hand sidebar to start a new file once you are o
 Copy and paste the code into the file:
 
 pragma solidity 0.8.18;
+contract AbayonToken {
+string public tokenName = "AEROS";
+string public tokenAbbrv = "ARS";
+uint public totalSupply = 10;
 
+mapping(address => uint) public balance;
 
-   contract AbayonToken {
-   
-    string public tokenName = "AEROS";
-    string public tokenAbbrv = "ARS";
-    uint public totalSupply = 10;
+function mint (address _address, uint _value) public {
+  totalSupply += _value;
+  balance[_address] += _value;
+}
 
-    mapping(address => uint) public balance;
-
-    function mint (address _address, uint _value) public {
-      totalSupply += _value;
-      balance[_address] += _value;
-    }
-
-    function burn (address _address, uint _value) public {
-      if (balance[_address] >= _value) {
-         totalSupply -= _value;
-         balance[_address] -= _value;
-      }
-    }
+function burn (address _address, uint _value) public {
+  if (balance[_address] >= _value) {
+     totalSupply -= _value;
+     balance[_address] -= _value;
+  }
+}
 }
 
 
