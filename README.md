@@ -5,13 +5,11 @@ This program's goal is to illustrate a token's fundamental syntactic functionali
 
 ## Description
 
-The goal of this smart contract project is to develop a proprietary token with the following features:
-1. The public variables in the contract (Token Name, Token Abbrv., and Total Supply) store information about the coin.
-2.  Addresses and balances are mapped in the contract (address => uint).
-3. The mint function in the contract requires two inputs: an address and a value. The function then raises the balance and the total supply by that amount of the "sender" address by the specified sum
-4. The contract includes a burn function that destroys tokens, operating in opposition to the mint function. 
-   In the same way as the mint operates, it will require an address and value. The value will then be subtracted from the entire supply and from the "sender's" equilibrium.
-5. Lastly, the burn function should have conditionals to make sure the balance of "sender" is greater than or equal to the amount that is supposed to be burned.
+The public variables in the contract (Token Name, Token Abbrv., and Total Supply) store information about the coin, the addresses and balances are mapped in the contract (address => uint).
+The mint function in the contract requires two inputs: an address and a value. The function then raises the balance and the total supply by that amount of the "sender" address by the specified sum
+The contract includes a burn function that destroys tokens, operating in opposition to the mint function. 
+In the same way as the mint operates, it will require an address and value. The value will then be subtracted from the entire supply and from the "sender's" equilibrium.
+Lastly, the burn function should have conditionals to make sure the balance of "sender" is greater than or equal to the amount that is supposed to be burned.
 
 ## Getting Started
 
@@ -23,7 +21,9 @@ Click the "+" symbol in the left-hand sidebar to start a new file once you are o
 Copy and paste the code into the file:
 
 pragma solidity 0.8.18;
+
 contract AbayonToken {
+
 string public tokenName = "AEROS";
 string public tokenAbbrv = "ARS";
 uint public totalSupply = 10;
@@ -45,7 +45,7 @@ function burn (address _address, uint _value) public {
 
 
 
-Select the "Solidity Compiler" tab from the sidebar on the left to begin compiling the code. Click the "Compile _.sol" button after ensuring that the "Compiler" option is set to"0.8.4" (or another suitable version).
+Select the "Solidity Compiler" tab from the sidebar on the left to begin compiling the code. Click the "Compile _.sol" button after ensuring that the "Compiler" option is set to"0.8.18" (or another suitable version).
 
 Selecting the "Deploy & Run Transactions" tab from the left-hand sidebar will allow you to deploy the contract after the code has been compiled. From the dropdown menu, choose the compiled contract, and then press the "Deploy" button.
 
