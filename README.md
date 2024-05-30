@@ -22,18 +22,35 @@ Click the "+" symbol in the left-hand sidebar to start a new file once you are o
 ### Executing program
 Copy and paste the code into the file:
 
-
-```javascript
-pragma solidity ^0.8.4;
+pragma solidity 0.8.18;
 
 contract AbayonToken {
+
+    // public variables here
+    string public tokenName = "AEROS";
+    string public tokenAbbrv = "ARS";
+    uint public totalSupply = 10;
+
+    // mapping variable here
+    mapping(address => uint) public balance;
+
+    // mint function
     function mint (address _address, uint _value) public {
       totalSupply += _value;
       balance[_address] += _value;
     }
+
+    // burn function
+    function burn (address _address, uint _value) public {
+      if (balance[_address] >= _value) {
+         totalSupply -= _value;
+         balance[_address] -= _value;
+      }
+    }
+
 }
 
-``` 
+
 
 Select the "Solidity Compiler" tab from the sidebar on the left to begin compiling the code. Click the "Compile _.sol" button after ensuring that the "Compiler" option is set to"0.8.4" (or another suitable version).
 
